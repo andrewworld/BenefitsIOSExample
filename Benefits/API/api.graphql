@@ -1,0 +1,49 @@
+query GetCity($id: ID!) {
+    getCity(id: $id) {
+        categories {
+            id
+            name
+        }
+    }
+}
+
+query GetCategory($id: ID!){
+    getCategory(id: $id){
+        id
+        name
+        benefits{
+            id
+            discount
+            name
+            description
+            working
+            parentCategory{
+                id
+                name
+            }
+        }
+    }
+}
+
+query GetBenefits{
+    getBenefits {
+        name
+        description
+        discount
+        parentCategory {
+            name
+        }
+    }
+}
+
+
+
+query GetLocations{
+    getBenefits {
+        name
+        locations{
+            lng
+            lat
+        }
+    }
+}
