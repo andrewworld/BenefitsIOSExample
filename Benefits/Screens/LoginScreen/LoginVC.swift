@@ -10,9 +10,9 @@ import UIKit
 import Foundation
 
 class LoginVC: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet private weak var usernameTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
     }
     
-    @IBAction func login(_ sender: Any) {
+    @IBAction private func login(_ sender: Any) {
        Auth.logIn(username: usernameTextField.text!, password: passwordTextField.text!)
     }
     

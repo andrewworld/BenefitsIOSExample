@@ -16,7 +16,7 @@ class SettingsVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func logout(_ sender: Any) {
+    @IBAction private func logout(_ sender: Any) {
         Auth.logOut()
     }
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C26506B3B091DC26E8C3ECA /* Pods_BenefitsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D46D568825AE236B55E6FB2 /* Pods_BenefitsTests.framework */; };
+		490D6FE721CAD8110076568D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D6FE621CAD8110076568D /* Constants.swift */; };
 		4912B6FA21B67E2C008685EA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912B6F921B67E2C008685EA /* API.swift */; };
 		4912B6FC21B6825F008685EA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912B6FB21B6825F008685EA /* Category.swift */; };
 		4913B3BA21AEC38200C433EE /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4913B3B921AEC38200C433EE /* CategoriesTableViewCell.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		490D6FE621CAD8110076568D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4912B6F921B67E2C008685EA /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Benefits/API.swift; sourceTree = SOURCE_ROOT; };
 		4912B6FB21B6825F008685EA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		4913B3B921AEC38200C433EE /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				4913B3CA21B13BE600C433EE /* Auth.swift */,
+				490D6FE621CAD8110076568D /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				4912B6FA21B67E2C008685EA /* API.swift in Sources */,
 				4913B3C221AFF2A500C433EE /* BenefitsTableVC.swift in Sources */,
 				4989976821AEA74A009A0218 /* MapVC.swift in Sources */,
+				490D6FE721CAD8110076568D /* Constants.swift in Sources */,
 				4989976421AEA74A009A0218 /* AppDelegate.swift in Sources */,
 				4989978621AEA786009A0218 /* SettingsVC.swift in Sources */,
 			);

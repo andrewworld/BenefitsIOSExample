@@ -9,22 +9,31 @@
 import UIKit
 
 class BenefitsTableViewCell: UITableViewCell {
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var logo: UIImageView!
-    @IBOutlet weak var discountLabel: UILabel!
-    @IBOutlet weak var categoryIcon: UIImageView!
-    @IBOutlet weak var categoryNameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var logo: UIImageView!
+    @IBOutlet private weak var discountLabel: UILabel!
+    @IBOutlet private weak var categoryIcon: UIImageView!
+    @IBOutlet private weak var categoryNameLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
     
-    @IBAction func call(_ sender: Any) {
+    func update(benefit: Benefit){
+        nameLabel.text = benefit.name
+        logo.image = benefit.logo
+        categoryNameLabel.text = benefit.categoryName
+        categoryIcon.image = UIImage(named: Images.category_18pt)
+        discountLabel.text = benefit.discount
+        descriptionLabel.text = benefit.description
+    }
+    
+    @IBAction private func call(_ sender: Any) {
         print("CALL")
     }
     
-    @IBAction func map(_ sender: Any) {
+    @IBAction private func map(_ sender: Any) {
           print("OPEN MAP")
     }
     
-    @IBAction func web(_ sender: Any) {
+    @IBAction private func web(_ sender: Any) {
           print("OPEN SAFARI")
     }
 }

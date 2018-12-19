@@ -9,9 +9,7 @@
 import UIKit
 import Apollo
 
-let graphQLEndpoint = "https://benefit-app-api-graphql.herokuapp.com/graphql"
-let apollo = ApolloClient(url: URL(string: graphQLEndpoint)!)
-
+let apollo = ApolloClient(url: URL(string: URLs.baseURL)!)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

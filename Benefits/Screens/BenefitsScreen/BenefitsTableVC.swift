@@ -9,12 +9,13 @@
 import UIKit
 
 class BenefitsTableVC: UITableViewController {
-    let loadingView = UIView()
-    let spinner = UIActivityIndicatorView()
-    let loadingLabel = UILabel()
+    private let loadingView = UIView()
+    private let spinner = UIActivityIndicatorView()
+    private let loadingLabel = UILabel()
+    
+    private var benefits = [Benefit]()
     
     var categoryId: String = ""
-    var benefits = [Benefit]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,20 +36,11 @@ class BenefitsTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "BenefitsTableViewCellIdentifier"
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? BenefitsTableViewCell  else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(BenefitsTableViewCell.self)", for: indexPath) as? BenefitsTableViewCell  else {
             fatalError("The dequeued cell is not an instance of CategoriesTableViewCell.")
         }
         
-        let benefit = benefits[indexPath.row]
-        
-        cell.nameLabel.text = benefit.name
-        cell.logo.image = benefit.logo
-        cell.categoryNameLabel.text = benefit.categoryName
-        cell.categoryIcon.image = UIImage(named: "category_18pt")
-        cell.discountLabel.text = benefit.discount
-        cell.descriptionLabel.text = benefit.description
+        cell.update(benefit: benefits[indexPath.row])
         
         return cell
     }

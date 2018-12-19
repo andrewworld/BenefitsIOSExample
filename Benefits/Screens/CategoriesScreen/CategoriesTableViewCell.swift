@@ -9,8 +9,8 @@
 import UIKit
 
 class CategoriesTableViewCell: UITableViewCell {
-    @IBOutlet weak var icon: UIImageView!
-    @IBOutlet weak var name: UILabel!
+    @IBOutlet private weak var icon: UIImageView!
+    @IBOutlet private weak var name: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,4 +20,9 @@ class CategoriesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
+    func update(category: Category){
+        name.text = category.name
+        icon.image = UIImage(named: Images.category_24pt)
+    }
+    
 }

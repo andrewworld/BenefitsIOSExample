@@ -10,11 +10,11 @@ import UIKit
 import Apollo
 
 class CategoriesTableVC: UITableViewController {
-    let loadingView = UIView()
-    let spinner = UIActivityIndicatorView()
-    let loadingLabel = UILabel()
+    private let loadingView = UIView()
+    private let spinner = UIActivityIndicatorView()
+    private let loadingLabel = UILabel()
     
-    var categories = [Category]()
+    private var categories = [Category]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,16 +33,11 @@ class CategoriesTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "CategoriesTableViewCellIdentifier"
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CategoriesTableViewCell  else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(CategoriesTableViewCell.self)", for: indexPath) as? CategoriesTableViewCell  else {
             fatalError("The dequeued cell is not an instance of CategoriesTableViewCell.")
         }
         
-        let category = categories[indexPath.row]
-        
-        cell.name.text = category.name
-        cell.imageView?.image = UIImage(named: "category_24pt")
+        cell.update(category: categories[indexPath.row])
         
         return cell
     }
@@ -70,7 +65,7 @@ class CategoriesTableVC: UITableViewController {
     private func loadCategories(){
         showLoadingView()
         
-        apollo.fetch(query: GetCityQuery(id: "5bd083578673813050d06034")) { result, error in
+        apollo.fetch(query: GetCityQuery(id: "5bd083578673813050d06034")) { result, error in // todo add cities
             self.hideLoadingView()
             
             guard let data = result?.data?.getCity.categories else { return }

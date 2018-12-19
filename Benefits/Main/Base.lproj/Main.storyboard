@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CategoriesTableViewCellIdentifier" textLabel="M19-qh-n7M" imageView="u1g-xl-GcK" rowHeight="54" style="IBUITableViewCellStyleDefault" id="oYA-ea-GJ2" customClass="CategoriesTableViewCell" customModule="Benefits" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CategoriesTableViewCell" textLabel="M19-qh-n7M" imageView="u1g-xl-GcK" rowHeight="54" style="IBUITableViewCellStyleDefault" id="oYA-ea-GJ2" customClass="CategoriesTableViewCell" customModule="Benefits" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oYA-ea-GJ2" id="4Mp-An-qLv">
@@ -71,7 +71,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BenefitsTableViewCellIdentifier" rowHeight="210" id="fIC-kQ-eC9" customClass="BenefitsTableViewCell" customModule="Benefits" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BenefitsTableViewCell" rowHeight="210" id="fIC-kQ-eC9" customClass="BenefitsTableViewCell" customModule="Benefits" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="210"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fIC-kQ-eC9" id="VUB-sb-rK3">

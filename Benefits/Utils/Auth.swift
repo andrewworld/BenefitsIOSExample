@@ -11,10 +11,9 @@ import UIKit
 import Alamofire
 
 class Auth {
-    
     static func checkAuth(){
         
-        let sessionId = UserDefaults.standard.object(forKey: "sessionId")
+        let sessionId = UserDefaults.standard.object(forKey: Keys.UserDefaults.sessionId)
         var rootVC : UIViewController?
         
         if (sessionId != nil) {
@@ -33,7 +32,7 @@ class Auth {
             "Password": password
         ]
         
-        AF.request("https://smg.itechart-group.com/MobileServiceNew/MobileService.svc/PostAuthenticate", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON(completionHandler: {response in
+        AF.request(URLs.authURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON(completionHandler: {response in
             guard let data = response.result.value as? [String: AnyObject] else{
                 return
             }
@@ -42,13 +41,13 @@ class Auth {
                 return
             }
             
-            UserDefaults.standard.set(sessionId, forKey: "sessionId")
+            UserDefaults.standard.set(sessionId, forKey: Keys.UserDefaults.sessionId)
             checkAuth()
         })
     }
     
     static func logOut(){
-        UserDefaults.standard.set(nil, forKey: "sessionId")
+        UserDefaults.standard.set(nil, forKey: Keys.UserDefaults.sessionId)
         checkAuth()
     }
     
