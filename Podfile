@@ -9,6 +9,7 @@ target 'Benefits' do
     
     pod 'Apollo'
     pod 'Alamofire', '~> 5.0.0.beta.1'
+    pod 'RealmSwift'
     
     target 'BenefitsTests' do
         inherit! :search_paths

@@ -3,20 +3,30 @@ PODS:
   - Apollo (0.9.4):
     - Apollo/Core (= 0.9.4)
   - Apollo/Core (0.9.4)
+  - Realm (3.13.0):
+    - Realm/Headers (= 3.13.0)
+  - Realm/Headers (3.13.0)
+  - RealmSwift (3.13.0):
+    - Realm (= 3.13.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0.beta.1)
   - Apollo
+  - RealmSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Apollo
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   Alamofire: 2ef6d6c984c5d21c366e9b41a9ae7dfee2b67a44
   Apollo: 450856adbdebcdf28c3c671f81732ac3f9944065
+  Realm: 5edd2ee65406aef591a4f9895de5a3440e51b3d8
+  RealmSwift: be5ebc7930e37cd3376b41cec7f21984528aaa16
 
-PODFILE CHECKSUM: b793e344ecf6d4aefe463931af9a3525e4aaf0fe
+PODFILE CHECKSUM: 1695d5798a7ca9429d8d68818edfcf440c072d30
 
 COCOAPODS: 1.5.3
